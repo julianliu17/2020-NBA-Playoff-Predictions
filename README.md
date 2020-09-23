@@ -100,6 +100,7 @@ After scraping the data, I ended up with 2 csv files which I needed to merge and
   * After plotting heatmap of correlations, dropped features SRS and PTS/gm as SRS was strongly correlated to W/L% and PTS/gm to FG/gm
   * Dropped weakly correlated features to both Make Playoffs __and__ Playoff Wins, FT/gm, 2P/gm, FT%, Wt., Ht., Rel Pace
   * I also split my dataframe into 2019-20 season (target_season) and the remaining seasons (df)
+  * Dropped columns Season and Team as they are of no use anymore after splitting dataframe into 2
   * Before bulding models and after EDA, I decided to remove W/L% when building my classification models, becuase this project is trying to predict whether a team makes the playoffs based on regular season stats, but W/L% will too easily pick out the top teams
 
 *EDA and model building was performed on df, target_season was used as a test set to predict our final results. The tables and their info() is shown below.*
