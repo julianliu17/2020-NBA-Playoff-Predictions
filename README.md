@@ -153,13 +153,21 @@ __Ordinary Least Squares (OLS)__ - When I started off with the OLS linear regres
 
 __Lasso Regression__ - The Lasso Regression performed marginally better than the OLS model, RMSE = 4.34 compared to RMSE = 4.36
 
-__Neural Network__ - Systematically tested out different layers and nodes, found the best combination was 18/18/18/1 with a dropout layer (0.5) before the output layer. Implemented early stopping to prevent overfitting.
+__Neural Network__ - Systematically tested out different layers and nodes, found the best combination was 18/18/18/1 with a dropout layer (0.5) before the output layer. Implemented early stopping to prevent overfitting. The ANN model was the only model that predicted positive playoff wins for all teams that actually made the 2020 playoffs.
 ![dlcode](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/dl_code.JPG "dl code")![dlloss](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/dl_loss.JPG "dl loss")
 
 When a team wins the playoffs they have to have won 16 games, but none of our models predicted 16 games. So I decided to use the playoff wins predicted by the models to calculate the win probability predicted by the model by dividing playoff wins by 16 (there's most definitely a better way to do this, but this is what I chose to go with). There were also negative playoff wins predicted by the models so I just set them all to 0. 
 
 Our final predictions for the 2020 NBA Playoffs by the ANN model is shown below:
+
 ![final predictions](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/final_predictions.JPG "final predictions")
+
+All the models have predicted the same top 5 teams most likely to win the playoffs:
+1. Milwaukee Bucks
+2. Los Angeles Lakers
+3. Toronto Raptors
+4. Los Angeles Clippers
+5. Utah Jazz
 
 ## Model Performance
 For the classification problem, the neural network 17/8/1 model had a perfect 100% accuracy on test set (2019-20 season), closely followed by the random forest model with 97% accuracy.
@@ -170,13 +178,13 @@ For the classification problem, the neural network 17/8/1 model had a perfect 10
   * __Logistic Regression__ accuracy = 93%
   * __K-NN__ accuracy = 90%
 
-For the linear regression problem, all the models had very similar RMSE, but the neural network 18/18/18/1 model had the lowest RMSE.
+For the linear regression problem, all the models had very similar RMSE, but the neural network 18/18/18/1 model had the lowest RMSE and the only model that predicted positive playoff wins for all teams that made the playoffs.
 
   * __Neural Network 18/18/18/1__ RMSE = 4.26
   * __Lasso Regression__ RMSE = 4.34
   * __Linear Regression__ RMSE = 4.36
 ## Project Evaluation
-For our linear regression problem, I would say that such a small improvement in RMSE cannot justify the need for using a deep learning model. There was also a problem with training size for this problem, since there are only 16 teams who makes the playoffs every season, our initial 16 years worth of data was basically cut in half. Another problem is that our features did not have a very strong correlation with the number of playoff wins, which also hurt our models' performance. If I were to do this project again I would definitely look for features more strongly correlated to the number of playoff wins. I definitely could also adopt other models such as random forest regression and ridge regression.
+For our linear regression problem, I would say that such a small improvement in RMSE alone cannot justify the need for using a deep learning model but because it was the only model that predicted positive number of playoff wins for all teams that actually made the 2020 playoffs, the best model for our linear regression problem was the ANN model. There was also a problem with training size for this problem, since there are only 16 teams who makes the playoffs every season, our initial 16 years worth of data was basically cut in half. Another problem is that our features did not have a very strong correlation with the number of playoff wins, which also hurt our models' performance. If I were to do this project again I would definitely look for features more strongly correlated to the number of playoff wins. I definitely could also adopt other models such as random forest regression and ridge regression.
 
 Nevertheless, our classification models performed reasonably well with our ANN model performing with an accuracy of 100% on our test set.
 
