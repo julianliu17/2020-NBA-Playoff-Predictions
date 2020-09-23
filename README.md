@@ -99,8 +99,15 @@ After scraping the data, I ended up with 2 csv files which I needed to merge and
   * Dropped G column after using number of games to convert stats to per game stats
   * After plotting heatmap of correlations, dropped features SRS and PTS/gm as SRS was strongly correlated to W/L% and PTS/gm to FG/gm
   * Dropped weakly correlated features to both Make Playoffs __and__ Playoff Wins, FT/gm, 2P/gm, FT%, Wt., Ht., Rel Pace
+  * I also split my dataframe into 2019-20 season (target_season) and the remaining seasons (df)
   * Before bulding models and after EDA, I decided to remove W/L% when building my classification models, becuase this project is trying to predict whether a team makes the playoffs based on regular season stats, but W/L% will too easily pick out the top teams
 
+*EDA and model building was performed on df, target_season was used as a test set to predict our final results. The tables and their info() is shown below.*
+
+![df info](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Cleaned_df.JPG "df info")
+![df target season](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Cleaned_target.JPG "df target season")
+
+![df pt1](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Cleaned_df_table_pt1.JPG "df pt1")![df pt2](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Cleaned_df_table_pt2.JPG "df pt2")
 ## EDA
 
 ## Model Building
