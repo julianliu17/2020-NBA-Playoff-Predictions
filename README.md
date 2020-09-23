@@ -106,7 +106,7 @@ For the linear regression problem, all the models had very similar RMSE, but the
   * Lasso Regression RMSE = 4.34
 
 ## Project Evaluation
-For our linear regression problem, I would say that such a small improvement in RMSE cannot justify the need for using a deep learning model. There was also a problem with training size for this problem, since there are only 16 teams who makes the playoffs every season, our initial 16 years worth of data was basically cut in half. Another problem is that our features did not have a very strong correlation with the number of playoff wins, which also hurt our models' performance. If I were to do this project again I would definitely look for features more strongly correlated to the number of playoff wins. 
+For our linear regression problem, I would say that such a small improvement in RMSE cannot justify the need for using a deep learning model. There was also a problem with training size for this problem, since there are only 16 teams who makes the playoffs every season, our initial 16 years worth of data was basically cut in half. Another problem is that our features did not have a very strong correlation with the number of playoff wins, which also hurt our models' performance. If I were to do this project again I would definitely look for features more strongly correlated to the number of playoff wins. I definitely could also adopt other models such as random forest regression and ridge regression.
 
 Nevertheless, our classification models performed reasonably well with our ANN model performing with an accuracy of 100% on our test set.
 
