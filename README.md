@@ -169,6 +169,7 @@ All the models have predicted the same top 5 teams most likely to win the playof
 4. Los Angeles Clippers
 5. Utah Jazz
 
+Well, only the Lakers remain in this top 5 predicted by the models. Maybe teams don't take the regular season all that seriously after all...
 ## Model Performance
 For the classification problem, the neural network 17/8/1 model had a perfect 100% accuracy on test set (2019-20 season), closely followed by the random forest model with 97% accuracy.
 
