@@ -31,12 +31,53 @@ __Python Version__: 3.8
 
 __Packages__: pandas, numpy, matplotlib, seaborn, beautifulsoup, tensorflow
 
-__Data__: https://www.basketball-reference.com/
-
-
+__Data Source__: https://www.basketball-reference.com/
 ## Web Scraping and Features Definition
-
-
+These are the features that were scraped and their definitions:
+  * __Season__ - *NBA Season denoted "yyyy-yy", eg. "2008-09"*
+  * __Team__ - *Full team name, eg. "Golden State Warriors"*
+  * __Tm__ - *Team name abbreviation, eg. "GSW"*
+  * __W__ - *Total number of wins in a season*
+  * __L__ - *Total number of losses in a season*
+  * __W/L%__ - *Win-Loss percentage, calculated by wins/total games played in a season*
+  * __Finish__ - *Regular season finish by division*
+  * __SRS__ - *Simple Rating System, a rating system that takes into account average point differential and strength of schedule. SRS = 0 = average*
+  * __Pace__ - *Estimate of possesions per 48 mins*
+  * __Rel Pace__ - *Team's possessions per 48 mins relative to the league*
+  * __ORtg__ - *Offensive rating, estimate of points scored per 48 mins*
+  * __Rel ORtg__ - *Team's offensive rating relative to the league*
+  * __DRtg__ - *Defensive rating, estimate of points allowed per 48 mins*
+  * __Rel DRtg__ - *Team's defensive rating relative to the league*
+  * __Playoffs__ - *Description of playoff status, eg. "Lost W. Div. Semis" or "Won Finals"*
+  * __Coaches__ - *Name of coach/coaches*
+  * __Top WS__ - *Highest win share generator during the regular season, eg. "K. Bryant (8.1)"*
+  * __Age__ - *Average player age*
+  * __Ht.__ - *Average player height*
+  * __Wt.__ - *Average player weight*
+  * __G__ - *Games played in a season*
+  * __MP__ - *Minutes played in a season*
+  * __FG__ - *Field goals made in a season*
+  * __FGA__ - *Field goal attempts in a season*
+  * __FG%__ - *Field goal percentage in a season*
+  * __3P__ - *3 points made in a season*
+  * __3PA__ - *3 point attempts in a season*
+  * __3P%__ - *3 point percentage in a season*
+  * __2P__ - *2 points made in a season*
+  * __2PA__ - *2 point attempts in a season*
+  * __2P%__ - *2 point percentage in a season*
+  * __FT__ - *Free throws made in a season*
+  * __FTA__ - *Free throw attempts in a season*
+  * __FT%__ - *Free throw percentage in a season*
+  * __ORB__ - *Total offensive rebounds in a season*
+  * __DRB__ - *Total defensive rebounds in a season*
+  * __TRB__ - *Total rebounds in a season*
+  * __AST__ - *Total assists in a season*
+  * __STL__ - *Total steals in a season*
+  * __BLK__ - *Total blocks in a season*
+  * __TOV__ - *Total turnovers in a season*
+  * __PF__ - *Total personal fouls in a season*
+  * __PTS__ - *Total points scored in a season*
+  * __Playoff Wins__ - *Number of playoff wins, 16 is the maximum and implies the team won the playoffs
 
 ## Data Cleaning and Feature Engineering
 
