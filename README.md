@@ -2,7 +2,7 @@
 # 2020 NBA Playoffs Prediction 
 **2020 NBA Playoffs winner and teams prediction based on regular season stats**
 
-Playoff winner is decided based on number of playoff games won
+*Note: Playoff winner is decided based on number of playoff games won*
 
 1. Scraped 16 years of regular season stats and historic playoff wins from basketball-reference.com using python and beautifulsoup4
 2. Performed Data Cleaning and Feature Engineering from scraped data
@@ -10,7 +10,7 @@ Playoff winner is decided based on number of playoff games won
 4. Executed Classification models (Logistic Regression, K-NN, Random Forest, SVC, Neural Network) to predict __*playoff teams*__ with highest accuracy = 100%
 5. Executed Linear Regression models (Linear Regression, Lasso Regression, Neural Network) to predict __*playoff winner*__ with lowest RMSE = 4.26 games
 
-This was my first ever data science project, and I wanted to do it on a topic I am enthusiastic about to keep me motivated. 2020 has been a crazy year, when the NBA returned at the bubble I was over the moon. The goal of this project was to predict the winner of the 2020 NBA Playoffs using regular season stats, but I quickly realised I could also build a model to predict which 16 teams would make the playoffs based on regular season stats. I scraped all of the data used in this project, feel free to download, edit and run *NBAScraper.py* on your terminal to scrape the stats you want to make your own predictions.
+This was my first ever data science project, and I wanted to do it on a topic I am enthusiastic about. 2020 has been a crazy year, when the NBA returned at the bubble I was over the moon. The goal of this project was to predict the winner of the 2020 NBA Playoffs using regular season stats, but I quickly realised I could also build a model to predict which 16 teams would make the playoffs based on regular season stats. I scraped all of the data used in this project, feel free to download, edit and run *NBAScraper.py* on your terminal to scrape the stats you want to make your own predictions.
 
 ## File Descriptions
 NBAPredictions.ipynb - *Jupyter Notebook with data cleaning, feature engineering, EDA as well as classification and linear regression models.*
