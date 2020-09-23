@@ -110,8 +110,20 @@ After scraping the data, I ended up with 2 csv files which I needed to merge and
 
 ![df pt1](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Cleaned_df_table_pt1.JPG "df pt1")![df pt2](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Cleaned_df_table_pt2.JPG "df pt2")
 ## EDA
+I looked at the heatmap and distributions of the data for all of our variables. 
 
+Below are the visualizations I plotted for all features against playoff wins.
+
+![heatmap](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Heatmap.JPG "heatmap")
+![dist pt1](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Dist_pt1.JPG "dist pt1")
+![dist pt2](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Dist_pt2.JPG "dist pt2")
+![dist pt3](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Dist_pt3.JPG "dist pt3")
+![W/L](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/W_L.JPG "W/L")
+![fairly correlated](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Fairly_correlated.JPG "fairly correlated")
+![fairly correlated pt2](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Fairly_correlated_pt2.JPG "fairly correlated pt2")
+![weakly correlated](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/Weakly_correlated.JPG "weakly correlated")
 ## Model Building
+
 
 ## Model Performance
 For the classification problem, the neural network 17/8/1 model had a perfect 100% accuracy on test set (2019-20 season), closely followed by the random forest model with 97% accuracy.
