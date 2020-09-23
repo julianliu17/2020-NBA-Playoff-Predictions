@@ -85,6 +85,21 @@ To get the csv file for these features simply change the code `df.to_csv(r'C:\YO
 ![Scraping Demo](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/ScrapingDemo.JPG "Scraping Demo")
 
 ## Data Cleaning and Feature Engineering
+After scraping the data, I ended up with 2 csv files which I needed to merge and clean so that it was usable for our models. I made the following changes and created the following varaibles:
+  * Removed asteriks from some Team names on nba_data dataframe, then merged the 2 tables on columns Season and Team
+  * Renamed Wins to Playoff Wins to avoid confusion with regular season wins
+  * Dropped unnecessary (in my opinion) columns such as MP, Finish, Coaches, Tm and repeated columns on both dataframes
+  * Converted Playoff columns to Make Playoffs which returned 0s and 1s instead of a description of playoff status, teams that did not make the playoffs did not have a description in the Playoff column
+  * Converted na values in Playoff Wins to 0
+  * Converted average player heights from foot inches to cm, eg. '6-6' to 198.12
+  * Dropped 2PA, 3PA, FGA and FTA since they could be calculated backwards using 2P and 2P% for example
+  * Dropped ORtg, DRtg and Pace since on its own they don't mean anything unless compared with the rest of the league, which we already have in the dataframe as Rel ORtg, Rel DRtg and Rel Pace
+  * Dropped W and L, since W/L% is calculated using W so both W and L will be strongly correlated to W/L% and to each other
+  * Converted stats to per game stats, because the number of games played each season is different (games were cut short in 2020 because of COVID, but I found that in other seasons there also have been cases where not all 82 games were played), eg. 2P is now converted to 2P/gm
+  * Dropped G column after using number of games to convert stats to per game stats
+  * After plotting heatmap of correlations, dropped features SRS and PTS/gm as SRS was strongly correlated to W/L% and PTS/gm to FG/gm
+  * Dropped weakly correlated features to both Make Playoffs __and__ Playoff Wins, FT/gm, 2P/gm, FT%, Wt., Ht., Rel Pace
+  * Before bulding models and after EDA, I decided to remove W/L% when building my classification models, becuase this project is trying to predict whether a team makes the playoffs based on regular season stats, but W/L% will too easily pick out the top teams
 
 ## EDA
 
@@ -93,17 +108,17 @@ To get the csv file for these features simply change the code `df.to_csv(r'C:\YO
 ## Model Performance
 For the classification problem, the neural network 17/8/1 model had a perfect 100% accuracy on test set (2019-20 season), closely followed by the random forest model with 97% accuracy.
 
-  * Neural Network 17/8/1 accuracy = 100%
-  * Random Forest accuracy = 97%
-  * SVC accuracy = 93%
-  * Logistic Regression accuracy = 93%
-  * K-NN (n=8) accuracy = 90%
+  * __Neural Network 17/8/1__ accuracy = 100%
+  * __Random Forest__ accuracy = 97%
+  * __SVC__ accuracy = 93%
+  * __Logistic Regression__ accuracy = 93%
+  * __K-NN__ accuracy = 90%
 
 For the linear regression problem, all the models had very similar RMSE, but the neural network 18/18/18/1 model had the lowest RMSE.
 
-  * Neural Network 18/18/18/1 RMSE = 4.26
-  * Linear Regression RMSE = 4.32
-  * Lasso Regression RMSE = 4.34
+  * __Neural Network 18/18/18/1__ RMSE = 4.26
+  * __Linear Regression__ RMSE = 4.32
+  * __Lasso Regression RMSE__ = 4.34
 
 ## Project Evaluation
 For our linear regression problem, I would say that such a small improvement in RMSE cannot justify the need for using a deep learning model. There was also a problem with training size for this problem, since there are only 16 teams who makes the playoffs every season, our initial 16 years worth of data was basically cut in half. Another problem is that our features did not have a very strong correlation with the number of playoff wins, which also hurt our models' performance. If I were to do this project again I would definitely look for features more strongly correlated to the number of playoff wins. I definitely could also adopt other models such as random forest regression and ridge regression.
