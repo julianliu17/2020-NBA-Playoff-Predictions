@@ -1,4 +1,5 @@
-# 2020 NBA Playoffs Prediction ![NBA Logo](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/tree/master/Pictures/NBAlogo.png "NBA Logo")
+![NBA Logo](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/NBAlogo.png "NBA Logo")
+# 2020 NBA Playoffs Prediction 
 **2020 NBA Playoffs winner and teams prediction based on regular season stats**
 
 Playoff winner is decided based on number of playoff games won
@@ -79,7 +80,9 @@ These are the features that were scraped and their definitions:
   * __PTS__ - *Total points scored in a season*
   * __Playoff Wins__ - *Number of playoff wins, 16 is the maximum and implies the team won the playoffs
 
-![Scraping Demo](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/tree/master/Pictures/ScrapingDemo.JPG "Scraping Demo")
+To get the csv file for these features simply change the code `df.to_csv(r'C:\YOUR PATH\nba_data.csv',index=False, header=True)` and `df3.to_csv(r'C:\YOUR PATH\playoffs_data.csv',index=False, header=True)` in the NBAScraper.py file. When you run `python NBAScraper.py` you should get something like this.
+
+![Scraping Demo](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/blob/master/Pictures/ScrapingDemo.JPG "Scraping Demo")
 
 ## Data Cleaning and Feature Engineering
 
@@ -103,5 +106,5 @@ For the linear regression problem, all the models had very similar RMSE, but the
   * Lasso Regression RMSE = 4.34
 
 ## Project Evaluation
-
+For our linear regression problem, I would say that such a small improvement in RMSE cannot justify the need for using a deep learning model. There was also a problem with training size for this problem, since there are only 16 teams who makes the playoffs every season, our initial 16 years worth of data was basically cut in half.
 
