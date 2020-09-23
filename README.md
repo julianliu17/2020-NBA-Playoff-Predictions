@@ -1,4 +1,4 @@
-# 2020 NBA Playoffs Prediction
+# 2020 NBA Playoffs Prediction ![NBA Logo](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/tree/master/Pictures/NBAlogo.png "NBA Logo")
 **2020 NBA Playoffs winner and teams prediction based on regular season stats**
 
 Playoff winner is decided based on number of playoff games won
@@ -78,6 +78,8 @@ These are the features that were scraped and their definitions:
   * __PF__ - *Total personal fouls in a season*
   * __PTS__ - *Total points scored in a season*
   * __Playoff Wins__ - *Number of playoff wins, 16 is the maximum and implies the team won the playoffs
+
+![Scraping Demo](https://github.com/julianliu17/2020-NBA-Playoff-Predictions/tree/master/Pictures/ScrapingDemo.JPG "Scraping Demo")
 
 ## Data Cleaning and Feature Engineering
 
